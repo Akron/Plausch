@@ -16,4 +16,6 @@ describe('Plausch.Comment', function () {
 
   it('should have a date');
   it('should support adding comments');
+  it('should be upvotable');
+  it('should be downvotable');
 });
