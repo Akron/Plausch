@@ -1,0 +1,10 @@
+todo.org
+Makefile
+sandbox
+*~
+*.sqlite
+*.log
+*.db
+*.old
+.*
+!.gitignore
