@@ -19,6 +19,20 @@ p {
   text-shadow: 1px 1px 0px #bbb;
 }
 
+div.plausch {
+  background-color: green;
+}
+
+div.plausch span.plausch-author {
+  display: block;
+}
+
+div.plausch span.plausch-comment {
+  display: block;
+  background-color: red;
+}
+
+
     </style>
   </head>
   <body>
@@ -29,4 +43,10 @@ p {
     <p>Maecenas feugiat tellus sed maximus blandit. Integer varius dignissim odio sit amet interdum. Phasellus dui lorem, interdum ut efficitur a, varius ac dui. Fusce tempor sapien ac justo tristique, id cursus dui tincidunt. Phasellus ullamcorper magna vitae placerat cursus. Vivamus dolor turpis, hendrerit nec mauris vitae, aliquam dapibus mi. Curabitur non eros ac leo pretium rutrum maximus et turpis. Vivamus quis rhoncus nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer scelerisque nisi sollicitudin ex fringilla, vitae mattis leo consequat. Nunc in tellus laoreet, placerat nibh at, accumsan nulla. Aliquam vehicula sagittis velit, et aliquam sem rutrum non. Aenean auctor mi vel enim hendrerit, sit amet bibendum ligula laoreet. Aenean fringilla sed mauris id pretium. Donec at massa nec lacus ornare bibendum. Pellentesque aliquam, justo in pellentesque aliquet, risus nunc egestas mi, sit amet blandit arcu ipsum elementum nunc.</p>
     <p>Aliquam et mollis mauris, tempus facilisis tortor. Nulla at tristique sem. Morbi tortor eros, auctor quis urna non, tincidunt tempus lacus. Etiam ac quam a magna sodales mattis. Fusce pretium urna sed vehicula aliquet. Cras consequat tellus sit amet magna pulvinar faucibus. Vestibulum rutrum nisi ante, nec luctus purus fermentum eget. Phasellus rhoncus rhoncus scelerisque. Praesent faucibus cursus pretium. Quisque a lorem risus. Quisque vel mi molestie, iaculis massa in, faucibus sapien. Fusce sed blandit quam, vestibulum imperdiet nisi. Cras viverra scelerisque leo, non ultrices mauris dapibus lacinia.</p>
   </body>
+<script>
+
+var pl = Plausch.Comment.create("Peter", "Hallo");
+document.getElementsByTagName('body')[0].appendChild(pl.element());
+
+</script>
 </html>
