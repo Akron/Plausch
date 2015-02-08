@@ -68,17 +68,17 @@ describe('Plausch.Comment', function () {
     var plausch = Plausch.Comment.create(undefined, "Super Text!");
     var e = plausch.element();
     expect(e.getAttribute('class')).toEqual('plausch');
-    expect(e.firstChild.getAttribute('class')).toEqual('plausch-text');
+    expect(e.firstChild.getAttribute('class')).toEqual('plausch text');
     expect(e.firstChild.firstChild.nodeValue).toEqual('Super Text!');
 
     plausch = Plausch.Comment.create('Akron', "Besserer Text!");
     e = plausch.element();
     expect(e.getAttribute('class')).toEqual('plausch');
 
-    expect(e.firstChild.getAttribute('class')).toEqual('plausch-author');
+    expect(e.firstChild.getAttribute('class')).toEqual('plausch author');
     expect(e.firstChild.firstChild.nodeValue).toEqual('Akron');
 
-    expect(e.lastChild.getAttribute('class')).toEqual('plausch-text');
+    expect(e.lastChild.getAttribute('class')).toEqual('plausch text');
     expect(e.lastChild.firstChild.nodeValue).toEqual('Besserer Text!');
   });
 

@@ -60,8 +60,8 @@ var Plausch = Plausch || {};
     /* The HTML representation of the comment
      * looks like ...
      * <div class="plausch">
-     *   <span class="plausch-author">{author name}</span>
-     *   <span class="plausch-text">{comment text}</span>
+     *   <span class="plausch author">{author name}</span>
+     *   <span class="plausch text">{comment text}</span>
      * </div>
      */
     element : function () {
@@ -91,14 +91,14 @@ var Plausch = Plausch || {};
       // Create Author view
       if (this._author != undefined) {
 	var author = document.createElement('span');
-	author.setAttribute('class', 'plausch-author');
+	author.setAttribute('class', 'plausch author');
 	author.appendChild(document.createTextNode(this._author));
 	comment.appendChild(author);
       };
 
       // Create Author view
       var text = document.createElement('span');
-      text.setAttribute('class', 'plausch-text');
+      text.setAttribute('class', 'plausch text');
       text.appendChild(document.createTextNode(this._text));
       comment.appendChild(text);
       this._element = comment;

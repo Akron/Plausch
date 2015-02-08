@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <script src="../src/plausch.js"></script>
     <style type="text/css" rel="stylesheet">
+
 body {
   font-family: tahoma, verdana, arial;
   background-color: #eee;
@@ -13,25 +14,36 @@ body {
 }
 
 p {
-  margin-right: 20%;
+  margin-right: 10em;
   text-align: justify;
   color: #555;
   text-shadow: 1px 1px 0px #bbb;
 }
 
 div.plausch {
-  background-color: green;
+  width: 12em;
+  float: right;
+  margin-right: -13em;
+  border: 2px solid #bbb;
+  background-color: #ddd;
+  border-radius: 5px;
+  font-size: 85%;
 }
 
-div.plausch span.plausch-author {
+span.plausch {
   display: block;
+  margin: .3em;
 }
 
-div.plausch span.plausch-comment {
-  display: block;
-  background-color: red;
+span.plausch.author {
+  font-weight: bold;
+  border-bottom: 2px solid #bbb;
 }
 
+span.plausch.author::after {
+  font-weight: normal;
+  content: " schrieb"
+}
 
     </style>
   </head>
@@ -45,8 +57,9 @@ div.plausch span.plausch-comment {
   </body>
 <script>
 
-var pl = Plausch.Comment.create("Peter", "Hallo");
-document.getElementsByTagName('body')[0].appendChild(pl.element());
+var pl = Plausch.Comment.create("Peter", "Toller Text!");
+var p = document.getElementsByTagName('p')[1];
+p.insertBefore(pl.element(), p.firstChild);
 
 </script>
 </html>
